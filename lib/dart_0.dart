@@ -24,7 +24,7 @@ class Test {
 
   static const lifeMotto = 'I really love Flutter';
   static const lifeSecondMotto = 'I really love Dart';
-  final String lifeSupperMotto = '$lifeMotto & $lifeMotto';
+  final String lifeSupperMotto = '${lifeMotto}& $lifeMotto';
 
   var height = 3.2;
   dynamic unknown = true;

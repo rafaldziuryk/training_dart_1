@@ -15,4 +15,13 @@ void dart2() {
   print(intSet);
 
   final intMap = {0: 0, 1: 1, 2: 2};
+  final Map<String, dynamic> json = {
+    'name': 'Wojtek',
+    'age': 3,
+    'hobbies': [
+      'football',
+      'handball',
+    ],
+    'info': {'asdasd': 123123}
+  };
 }

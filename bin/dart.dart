@@ -2,7 +2,7 @@ import 'package:dart_1/dart_1.dart';
 import 'package:dart_1/dart_2.dart';
 
 void main(List<String> arguments) {
-  dart2();
+  dart1();
 }
 
 void dart1() {
