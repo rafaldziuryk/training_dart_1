@@ -1,14 +1,42 @@
-class DogA extends Mammal implements Animal {}
+class DogA extends Mammal implements Animal {
+  DogA({required super.age});
+}
 
-class DogB extends Animal implements Mammal {}
+class DogB extends Animal implements Mammal {
+  @override
+  int get age => 10;
 
-// class DogB1 implements Mammal {}
+  @override
+  Map<String, dynamic> toMap() {
+    return {
+      'age': age,
+    };
+  }
+}
 
-class DogC with Doggy implements Mammal {}
+class DogC with Doggy implements Mammal {
+  @override
+  int get age => throw UnimplementedError();
 
-class DogD with Doggy, DogMixin {}
+  @override
+  Map<String, dynamic> toMap() {
+    return {
+      'age': age,
+    };
+  }
+}
 
-class DogE extends Mammal with DogMixin implements Doggy {}
+class DogD1 extends Mammal with Doggy, DogMixin {
+  DogD1({required super.age});
+}
+
+class DogD2 extends Mammal with DogMixin, Doggy {
+  DogD2({required super.age});
+}
+
+class DogE extends Mammal with DogMixin implements Doggy {
+  DogE({required super.age});
+}
 
 abstract class Animal {
   String name() => 'Animal';
@@ -25,7 +53,7 @@ class Mammal {
 
   Map<String, dynamic> toMap() {
     return {
-      'age': this.age,
+      'age': age,
     };
   }
 
@@ -40,6 +68,14 @@ class Doggy {
   String name() => 'Doggy';
 }
 
-mixin DogMixin {
+mixin DogMixin on Mammal {
+  @override
   String name() => 'DogMixin';
+
+  @override
+  Map<String, dynamic> toMap() {
+    return {
+      'age': age,
+    };
+  }
 }
