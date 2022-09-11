@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, equal_elements_in_set
+
 void dart2() {
   List<int> intList = [1, 2, 3];
   intList.add(4);

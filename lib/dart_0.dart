@@ -24,22 +24,22 @@ class Test {
 
   static const lifeMotto = 'I really love Flutter';
   static const lifeSecondMotto = 'I really love Dart';
-  final String lifeSupperMotto = '${lifeMotto}& $lifeMotto';
+  final String lifeSupperMotto = '${lifeMotto.toLowerCase()}& $lifeMotto';
 
   var height = 3.2;
   dynamic unknown = true;
 
   double _price = 2.0;
 
-  double get price => _price;
+  double get doublePrice => 2 * _price;
 
   set price(double value) => _price = value;
 
-  void method() {
+  num method() {
     const test = 3;
     final test2 = 3.5;
     var test3 = 0xaa;
-    return;
+    return test + test2 + test3;
   }
 
   method2() {
